@@ -1,0 +1,14 @@
+<div class="card">
+  <header class="card-body">
+    <h5 class="card-title">{{ titulo }}</h5>
+    <p class="card-text">{{ subtitulo }}</p>
+  </header>
+  <hr>
+  <footer>
+    <button (click)="botaoSaibaMais('id')" class="btn btn-primary">Saiba mais</button>
+    <fa-icon [icon]="faChevronRight"
+    class="fa-sharp fa-light fa-chevron-right"
+    style="color: #0667b2;"></fa-icon>
+  </footer>
+
+</div>
