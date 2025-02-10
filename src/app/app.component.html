@@ -7,5 +7,10 @@
       <card-produto (saibaMais)="clickSaibaMais(produto.id)" [titulo]="produto.titulo" [subtitulo]="produto.subtitulo"/>
     </div>
 
+
+    <div *ngIf="produtoSelecionadoId">
+      <modal-contato [produtoId]="produtoSelecionadoId" (fechar)="fecharModal()"/>
+    </div>
+
 </main>
 

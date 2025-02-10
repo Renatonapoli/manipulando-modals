@@ -8,6 +8,7 @@ import { ProdutosService } from './service/produtos.service';
 })
 export class AppComponent {
   title = 'listaCards';
+  produtoSelecionadoId: string | null = null;
 
   constructor(private serviceProdutos: ProdutosService) {}
 
@@ -16,9 +17,11 @@ export class AppComponent {
   }
 
   clickSaibaMais(id: string) {
-    this.serviceProdutos.produtos.forEach((produto) => {
-      produto.id === id;
-      console.log(id);
-    });
+    this.produtoSelecionadoId = id;
+    console.log(this.produtoSelecionadoId);
+  }
+
+  fecharModal() {
+    this.produtoSelecionadoId = null;
   }
 }
