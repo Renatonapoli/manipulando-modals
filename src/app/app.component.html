@@ -1,5 +1,5 @@
 <header>
-  <h1>Lista Cards</h1>
+  <h1>Lista Cards de Produtos</h1>
 </header>
 
 <main>
@@ -9,7 +9,15 @@
 
 
     <div *ngIf="produtoSelecionadoId">
-      <modal-contato [produtoId]="produtoSelecionadoId" (fechar)="fecharModal()"/>
+      <modal-contato [produtoId]="produtoSelecionadoId" (abrirModalSucesso)="mostrarModalSucesso()" (fechar)="fecharModal()"/>
+    </div>
+
+    <div *ngIf="modalDeSucesso">
+      <modal-sucesso
+      (fecharModal)="fecharModal()"
+      [titulo]="'solicitação efetuada com sucesso!'"
+      [subtitulo]="'Recebemos a sua solitação e retornaremos o<br>contato em até 3 dias úteis'"
+      />
     </div>
 
 </main>

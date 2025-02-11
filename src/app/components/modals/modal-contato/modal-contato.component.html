@@ -1,9 +1,9 @@
-<div class="modal fade show d-flex" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal modal-dialog-centered fade show d-flex" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+  tabindex="-1" aria-labelledby="staticBackdropLabel">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header d-flex flex-column align-items-start">
-        <div class="d-flex justify-content-between w-5">
+        <div class="d-flex justify-content-between tituloModal">
           <h1 class="modal-title fs-5" id="staticBackdropLabel">Como você prefere receber o nosso contato? </h1>
           <button (click)="fecharModal()" type="button" class="btn-close" data-bs-dismiss="modal"
             aria-label="Close"></button>
@@ -15,29 +15,36 @@
         </div>
       <div class="modal-body">
 
+        <form [formGroup]="formulario">
+
         <div class="form-check">
           <input (change)="radioSelecionado('telefone')" class="form-check-input" type="radio" name="contato" id="telefone">
           <label class="form-check-label" for="telefone">
             telefone
           </label>
-          <div class="form-floating mb-3" *ngIf="opcaoSelecionada === 'telefone'">
+          <div class="mb-3" *ngIf="opcaoSelecionada === 'telefone'">
             <hr>
-            <input type="telefone" class="form-control" id="telefone" placeholder="(00)00000-0000">
-            <label for="telefone">número de telefone</label>
+            <label for="telefone" >número de telefone</label>
+            <input type="telefone" class="form-control" id="telefone" placeholder="(XX)XXXXX-XXXX" formControlName="telefone">
+            <small class="text-danger" *ngIf="isValid('telefone')">
+              {{ formulario.get('telefone')?.hasError('required') ? 'Campo obrigatório' : 'Formato inválido'}}
+            </small>
           </div>
-
         <hr>
-
         <input (change)="radioSelecionado('email')" class="form-check-input" type="radio" name="contato" id="email" >
           <label class="form-check-label" for="email">
             e-mail
           </label>
-          <div class="form-floating mb-3" *ngIf="opcaoSelecionada === 'email'" >
+          <div class="mb-3" *ngIf="opcaoSelecionada === 'email'" >
             <hr>
-            <input type="email" class="form-control" id="email" placeholder="e-mail">
-            <label for="floatingInput">e-mail</label>
+            <label for="email">digite seu email</label>
+            <input type="email" class="form-control" id="email" placeholder="exemplo@email.com" formControlName="email">
+            <small class="text-danger" *ngIf="isValid('email')">
+              {{ formulario.get('email')?.hasError('required') ? 'Campo obrigatório' : 'Formato inválido'}}
+            </small>
           </div>
         </div>
+      </form>
         <hr>
 
         <p> atendimento em até 03 dias úteis</p>
@@ -51,8 +58,12 @@
       </div>
       <div class="modal-footer justify-content-start">
         <button (click)="fecharModal()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">voltar</button>
-        <button type="button" class="btn btn-primary" [disabled]="!opcaoSelecionada">solicitar contato</button>
+        <button type="button" class="btn btn-primary" [disabled]="!isFormularioValido" (click)="solicitaContato()">solicitar contato</button>
       </div>
     </div>
   </div>
+</div>
+
+<div #modalSucesso class="modalSucesso">
+  <modal-sucesso />
 </div>

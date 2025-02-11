@@ -9,6 +9,7 @@ import { ProdutosService } from './service/produtos.service';
 export class AppComponent {
   title = 'listaCards';
   produtoSelecionadoId: string | null = null;
+  modalDeSucesso: boolean = false;
 
   constructor(private serviceProdutos: ProdutosService) {}
 
@@ -18,10 +19,14 @@ export class AppComponent {
 
   clickSaibaMais(id: string) {
     this.produtoSelecionadoId = id;
-    console.log(this.produtoSelecionadoId);
   }
 
   fecharModal() {
     this.produtoSelecionadoId = null;
+    this.modalDeSucesso = false;
+  }
+
+  mostrarModalSucesso() {
+    this.modalDeSucesso = true;
   }
 }

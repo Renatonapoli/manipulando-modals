@@ -1,3 +1,11 @@
 .modal-dialog {
   max-width: none;
 }
+
+.tituloModal {
+  width: 100%;
+}
+
+.modalSucesso {
+  display: none;
+}
