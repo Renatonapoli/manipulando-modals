@@ -57,27 +57,27 @@ Acesse http://localhost:4200/ no navegador.
 
 ## 🎨 Componentes
 
-CardProdutoComponent
+### CardProdutoComponent
 - Exibe as informações do produto.
 - Permite abrir o modal de contato ao clicar em "Saiba mais".
 - Recupera informações detalhadas do produto pelo ID no serviço.
 
-## ModalContatoComponent
+### ModalContatoComponent
 - Permite ao usuário escolher entre telefone e e-mail para contato.
 - Valida os campos antes de permitir o envio.
 
-## ModalSucessoComponent
+### ModalSucessoComponent
 - Confirma a solicitação de contato com uma mensagem ao usuário.
 
-## 🔧 Serviço
+### 🔧 Serviço
 - ProdutosService
 - Fornece uma lista de produtos disponíveis para exibição.
 - Retorna informações detalhadas do produto ao clicar em "Saiba mais".
 
-## 🛠️ Melhorias Futuras
+### 🛠️ Melhorias Futuras
 - Implementar backend para armazenar solicitações.
 - Melhorar a responsividade.
 - Adicionar testes unitários.
 
-## 📄 Licença
+### 📄 Licença
 - Este projeto está sob a licença MIT.
