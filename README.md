@@ -1,27 +1,83 @@
-# ListaCards
+# Lista de Cards de Produtos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+Este projeto é um aplicativo Angular que exibe uma lista de produtos em forma de cards e permite que os usuários solicitem contato por meio de um modal.
 
-## Development server
+## 📌 Tecnologias Utilizadas
+- Angular
+- TypeScript
+- Bootstrap
+- FontAwesome
+- Reactive Forms
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 📂 Estrutura do Projeto
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+📦 src/
+ ┣ 📂 app/
+ ┃ ┣ 📂 components/
+ ┃ ┃ ┣ 📂 card/
+ ┃ ┃ ┃ ┗ 📂 card-produto/ (Componente para exibição dos cards de produtos)
+ ┃ ┃ ┣ 📂 modals/
+ ┃ ┃ ┃ ┣ 📂 modal-contato/ (Modal para solicitar contato)
+ ┃ ┃ ┃ ┗ 📂 modal-sucesso/ (Modal de sucesso)
+ ┃ ┣ 📂 services/
+ ┃ ┃ ┗ produtos.service.ts (Serviço responsável por fornecer os produtos)
+ ┃ ┣ app.component.ts (Componente principal do projeto)
+ ┃ ┣ app.module.ts (Módulo principal da aplicação)
+ ┣ 📂 assets/ (Arquivos estáticos)
+ ┣ 📂 styles/ (Estilos globais)
 
-## Build
+🚀 Instalação e Execução
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 1️⃣ Pré-requisitos
+- Node.js e npm instalados
+- Angular CLI instalado
 
-## Running unit tests
+### 2️⃣ Clonar o repositório
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+```
+### 3️⃣ Instalar as dependências
+```bash
+npm install
+```
+### 4️⃣ Rodar o projeto
+```bash
+ng serve
+Acesse http://localhost:4200/ no navegador.
+```
+## 📌 Funcionalidades
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+✅ Exibição dinâmica de cards de produtos.
+✅ Modal de contato para solicitar informações.
+✅ Modal de sucesso para confirmação do envio.
+✅ Validação de formulário com Reactive Forms.
+✅ Recuperação de informações detalhadas ao clicar em "Saiba mais" pelo ID do produto no serviço.
 
-## Running end-to-end tests
+## 🎨 Componentes
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### CardProdutoComponent
+- Exibe as informações do produto.
+- Permite abrir o modal de contato ao clicar em "Saiba mais".
+- Recupera informações detalhadas do produto pelo ID no serviço.
 
-## Further help
+### ModalContatoComponent
+- Permite ao usuário escolher entre telefone e e-mail para contato.
+- Valida os campos antes de permitir o envio.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### ModalSucessoComponent
+- Confirma a solicitação de contato com uma mensagem ao usuário.
+
+### 🔧 Serviço
+- ProdutosService
+- Fornece uma lista de produtos disponíveis para exibição.
+- Retorna informações detalhadas do produto ao clicar em "Saiba mais".
+
+### 🛠️ Melhorias Futuras
+- Implementar backend para armazenar solicitações.
+- Melhorar a responsividade.
+- Adicionar testes unitários.
+
+### 📄 Licença
+- Este projeto está sob a licença MIT.
