@@ -12,20 +12,20 @@ Este projeto é um aplicativo Angular que exibe uma lista de produtos em forma d
 ## 📂 Estrutura do Projeto
 
 
-📦 src/
- ┣ 📂 app/
- ┃ ┣ 📂 components/
- ┃ ┃ ┣ 📂 card/
- ┃ ┃ ┃ ┗ 📂 card-produto/ (Componente para exibição dos cards de produtos)
- ┃ ┃ ┣ 📂 modals/
- ┃ ┃ ┃ ┣ 📂 modal-contato/ (Modal para solicitar contato)
- ┃ ┃ ┃ ┗ 📂 modal-sucesso/ (Modal de sucesso)
- ┃ ┣ 📂 services/
- ┃ ┃ ┗ produtos.service.ts (Serviço responsável por fornecer os produtos)
- ┃ ┣ app.component.ts (Componente principal do projeto)
- ┃ ┣ app.module.ts (Módulo principal da aplicação)
- ┣ 📂 assets/ (Arquivos estáticos)
- ┣ 📂 styles/ (Estilos globais)
+📦 src/  
+ ┣ 📂 app/  
+ ┃ ┣ 📂 components/  
+ ┃ ┃ ┣ 📂 card/  
+ ┃ ┃ ┃ ┗ 📂 card-produto/ (Componente para exibição dos cards de produtos)  
+ ┃ ┃ ┣ 📂 modals/  
+ ┃ ┃ ┃ ┣ 📂 modal-contato/ (Modal para solicitar contato)  
+ ┃ ┃ ┃ ┗ 📂 modal-sucesso/ (Modal de sucesso)  
+ ┃ ┣ 📂 services/  
+ ┃ ┃ ┗ produtos.service.ts (Serviço responsável por fornecer os produtos)  
+ ┃ ┣ app.component.ts (Componente principal do projeto)  
+ ┃ ┣ app.module.ts (Módulo principal da aplicação)  
+ ┣ 📂 assets/ (Arquivos estáticos)  
+ ┣ 📂 styles/ (Estilos globais)  
 
 🚀 Instalação e Execução
 
