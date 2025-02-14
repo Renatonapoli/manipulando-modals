@@ -79,5 +79,6 @@ Acesse http://localhost:4200/ no navegador.
 - Melhorar a responsividade.
 - Adicionar testes unitários.
 
-### 📄 Licença
-- Este projeto está sob a licença MIT.
+📌 Autor  
+👨‍💻 Renato Napoli Guimarães  
+📌 Desenvolvedor Frontend Sênior especializado em Angular, React e Vue.js
