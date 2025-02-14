@@ -44,7 +44,7 @@ npm install
 ```
 ### 4️⃣ Rodar o projeto
 ```bash
-ng serve
+npm run start
 Acesse http://localhost:4200/ no navegador.
 ```
 ## 📌 Funcionalidades
